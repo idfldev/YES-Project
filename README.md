@@ -1,5 +1,5 @@
-# React + Vite
-
+### React + Vite
+```bash
 /your-education-skills  (Thư mục gốc của dự án)
 ├── .git/               // Thư mục của Git
 ├── .gitignore          // Các file/folder được Git bỏ qua
@@ -72,3 +72,4 @@
     ├── .env                // Các biến môi trường cho server (chuỗi kết nối DB, JWT secret...)
     ├── app.js              // (Hoặc server.js, index.js) File khởi tạo Express app
     └── package.json        // Quản lý các gói thư viện và script cho server
+```
