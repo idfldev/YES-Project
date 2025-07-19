@@ -1,3 +1,27 @@
+### Git Repository Guides
+
+…or create a new repository on the command line
+
+```bash
+   echo "# YES_v1" >> README.md
+   git init
+   git add README.md
+   git commit -m "first commit"
+   git branch -M master
+   git remote add origin https://github.com/idfldev/YES-Project.git
+   git push -u origin master
+```
+
+…or push an existing repository from the command line
+
+```bash
+   git remote add origin https://github.com/idfldev/YES-Project.git
+   git branch -M master
+   git push -u origin master
+```
+
+___
+
 ### React + Vite
 ```bash
 /your-education-skills  (Thư mục gốc của dự án)
