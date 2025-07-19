@@ -4,7 +4,7 @@
 import './App.css'
 
 
-import LessonLayout from './components/LessonLayout';
+import LessonLayout from './components/layouts/LessonLayout';
 
 
 function App() {
