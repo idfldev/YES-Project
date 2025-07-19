@@ -17,7 +17,7 @@
 ```bash
    git remote add origin https://github.com/idfldev/YES-Project.git
    git branch -M master
-   git push -u origin master
+   git pull origin master
 ```
 ...Tải Về Một Dự Án Mới Hoàn Toàn (Chưa Có Folder Dự Án)
 
