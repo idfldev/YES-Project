@@ -19,6 +19,11 @@
    git branch -M master
    git push -u origin master
 ```
+...Tải Về Một Dự Án Mới Hoàn Toàn (Chưa Có Folder Dự Án)
+
+```bash
+git clone https://github.com/idfldev/YES-Project.git
+```
 
 ___
 
