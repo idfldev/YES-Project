@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import Header from './Header';
 import ProgressingBar from '../core/ProgressingBar';
-import Sidebar from '../Sidebar';
-import LessonPlayer from '../lessonPlayer';
-import Quiz from '../Quiz';
+import Sidebar from './Sidebar';
+import LessonPlayer from '../course/lessonPlayer';
+import Quiz from '../course/Quiz';
 
 export default function LessonLayout() {
     const [canProceed, setCanProceed] = useState(false);

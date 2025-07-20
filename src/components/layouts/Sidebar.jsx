@@ -1,4 +1,4 @@
-import lessons from '../JSON/lessons.json';
+import lessons from '../../db/JSON/lessons.json';
 
 export default function Sidebar() {
 
