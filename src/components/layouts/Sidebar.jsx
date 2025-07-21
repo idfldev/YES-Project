@@ -1,23 +1,21 @@
-import lessons from '../../db/JSON/lessons.json';
 
-export default function Sidebar() {
+export default function Sidebar({ lessons, isOpen, toggleSidebar }) {
 
     return (
-        <div className='w-64 bg-gray-100 p-4 border-r transition-all'>
-            
-            <h2 className='font-bold text-lg mb-4'>Danh Sách Bài Học</h2>
-            <ul className='space-y-2'>
-                {lessons.map((lesson) => (
-                    <li key={lesson.id} className='flex items-center justify-between'>
-                        <span>{lesson.title}</span>
-                        {lesson.completed ? (
-                            <span>✅</span>
-                        ) : (
-                            <span className='text-gray-400'>🔒</span>
-                        )}
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <aside className={`bg-gray-100 p-4 border-r transition-all duration-300 ${isOpen ? 'w-64' : 'w-0 overflow-hidden'}`}>
+            <button onClick={toggleSidebar} className="mb-4 text-xl">
+                {isOpen ? '<' : '≡'}
+            </button>
+            {isOpen && (
+                <ul className='space-y-2'>
+                    {lessons.map((lesson) => (
+                        <li key={lesson.id} className={`flex items-center justify-between p-2 rounded ${lesson.completed ? 'bg-green-200' : 'bg-red-200'}`}>
+                            <span>{lesson.title}</span>
+                            {lesson.completed ? '✅' : '🔒'}
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </aside>
     )
 }

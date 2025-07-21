@@ -1,6 +1,6 @@
 export default function LessonPlayer({ videoUrl }) {
     return (
-        <div className="bg-black rounded overflow-hidden mb-6">
+        <div className="shadow rounded overflow-hidden mb-6">
             <iframe 
             src={videoUrl}
             className="w-full h-100"
