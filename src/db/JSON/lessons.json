@@ -1,5 +1,16 @@
 [
-    {"id": 1, "title": "Section 1", "completed": true},
-    {"id": 2, "title": "Section 2", "completed": false},
-    {"id": 3, "title": "Section 3", "completed": false}
+  { "id": 1, "title": "Buổi 1: Khởi động dự án", "completed": true },
+  { "id": 2, "title": "Buổi 2: React cơ bản", "completed": true },
+  { "id": 3, "title": "Buổi 3: Tailwind nâng cao", "completed": false },
+  { "id": 4, "title": "Buổi 4: Routing & Form", "completed": false },
+
+  { "id": 5, "title": "Buổi 5: State & API", "completed": false },
+  { "id": 6, "title": "Buổi 6: Auth & Firebase", "completed": false },
+  { "id": 7, "title": "Buổi 7: Redux & Context", "completed": false },
+  { "id": 8, "title": "Buổi 8: Deploy & CI/CD", "completed": false },
+
+  { "id": 9, "title": "Buổi 9: Testing & Debugging", "completed": false },
+  { "id": 10, "title": "Buổi 10: Performance Optimization", "completed": false },
+  { "id": 11, "title": "Buổi 11: Progressive Web Apps", "completed": false },
+  { "id": 12, "title": "Buổi 12: Kết thúc dự án", "completed": false }
 ]
