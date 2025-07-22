@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import quizBuoi1 from '../JSON/section_1_1.json';
+import quizBuoi1 from '../../db/JSON/quiz.json';
 
-const quizData = quizBuoi1; 
 
 function QuizCard() {
+  const quizData = quizBuoi1; 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selected, setSelected] = useState(null);
   const question = quizData.quiz[currentQuestion];

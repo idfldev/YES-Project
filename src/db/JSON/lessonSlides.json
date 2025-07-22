@@ -1,0 +1,355 @@
+{
+   "lessonSlides": [{
+         "lessonId": 1,
+         "title": "Buổi 1: Thiết lập dự án",
+         "slides": [{
+               "id": 1,
+               "title": "Giới thiệu khóa học",
+               "content": "Khóa học Justin Source giúp bạn xây dựng cộng đồng học tập bằng React + Vite + Tailwind, từ cơ bản đến nâng cao."
+            },
+            {
+               "id": 2,
+               "title": "Công nghệ sử dụng",
+               "content": "🔹 React: thư viện UI hiện đại\n🔹 Vite: công cụ build nhanh\n🔹 Tailwind CSS: framework thiết kế giao diện tiện lợi"
+            },
+            {
+               "id": 3,
+               "title": "Thiết lập môi trường",
+               "content": "1. Cài đặt Node.js và npm\n2. Tạo project bằng lệnh `npm create vite@latest`\n3. Cài Tailwind CSS và cấu hình trong `tailwind.config.js`\n4. Import style vào `src/index.css`"
+            },
+            {
+               "id": 4,
+               "title": "Cấu trúc dự án cơ bản",
+               "content": "📂 src/\n├── components/\n├── pages/\n├── hooks/\n├── assets/\n├── context/\n├── utils/"
+            },
+            {
+               "id": 5,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 1. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 2,
+         "title": "Buổi 2: Xây dựng giao diện",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Thiết kế giao diện",
+               "content": "Sử dụng Tailwind CSS để tạo layout đẹp mắt và responsive."
+            },
+            {
+               "id": 2,
+               "title": "Tạo Header",
+               "content": "<header className='bg-blue-500 text-white p-4'>\n  <h1 className='text-2xl'>Khóa học Justin Source</h1>\n</header>"
+            },
+            {
+               "id": 3,
+               "title": "Tạo Sidebar",
+               "content": "<aside className='w-64 bg-gray-100 p-4'>\n  <nav>\n    <ul>\n      <li><a href='#'>Trang chủ</a></li>\n      <li><a href='#'>Bài học</a></li>\n    </ul>\n  </nav>\n</aside>"
+            },
+            {
+               "id": 4,
+               "title": "Tạo Main Content",
+               "content": "<main className='flex-1 p-4'>\n  <h2 className='text-xl mb-4'>Nội dung bài học</h2>\n</main>"
+            },
+            {
+               "id": 5,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 2. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 3,
+         "title": "Buổi 3: Quản lý trạng thái",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Giới thiệu về Context API",
+               "content": "Context API giúp chia sẻ dữ liệu giữa các component mà không cần truyền props qua từng cấp."
+            },
+            {
+               "id": 2,
+               "title": "Tạo Context",
+               "content": "const MyContext = React.createContext();"
+            },
+            {
+               "id": 3,
+               "title": "Cung cấp Context",
+               "content": "<MyContext.Provider value={data}>...</MyContext.Provider>"
+            },
+            {
+               "id": 4,
+               "title": "Sử dụng Context",
+               "content": "<MyContext.Consumer>{value => <div>{value}</div>}</MyContext.Consumer>"
+            },
+            {
+               "id": 5,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 3. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 4,
+         "title": "Buổi 4: Tương tác với API",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Giới thiệu về Fetch API",
+               "content": "Fetch API cho phép thực hiện các yêu cầu HTTP để lấy dữ liệu từ server."
+            },
+            {
+               "id": 2,
+               "title": "Lấy dữ liệu từ API",
+               "content": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data));"
+            },
+            {
+               "id": 3,
+               "title": "Xử lý lỗi khi gọi API",
+               "content": "fetch('https://api.example.com/data')\n  .then(response => {\n    if (!response.ok) throw new Error('Network response was not ok');\n    return response.json();\n  })\n  .catch(error => console.error('There was a problem with your fetch operation:', error));"
+            },
+            {
+               "id": 4,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 4. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 5,
+         "title": "Buổi 5: Tối ưu hiệu suất",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Giới thiệu về tối ưu hiệu suất",
+               "content": "Tối ưu hiệu suất giúp ứng dụng chạy mượt mà hơn, giảm thời gian tải trang và cải thiện trải nghiệm người dùng."
+            },
+            {
+               "id": 2,
+               "title": "Sử dụng React.memo",
+               "content": "React.memo giúp tránh render lại component khi props không thay đổi."
+            },
+            {
+               "id": 3,
+               "title": "Lazy loading",
+               "content": "Sử dụng React.lazy và Suspense để tải component chỉ khi cần thiết."
+            },
+            {
+               "id": 4,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 5. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 6,
+         "title": "Buổi 6: Triển khai ứng dụng",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Chuẩn bị triển khai",
+               "content": "Đảm bảo ứng dụng đã sẵn sàng để triển khai, không có lỗi và đã được tối ưu."
+            },
+            {
+               "id": 2,
+               "title": "Chọn nền tảng triển khai",
+               "content": "Có nhiều lựa chọn như Vercel, Netlify, Heroku, AWS, Firebase."
+            },
+            {
+               "id": 3,
+               "title": "Triển khai lên Vercel",
+               "content": "1. Đăng nhập vào Vercel\n2. Kết nối với GitHub\n3. Chọn repository và triển khai"
+            },
+            {
+               "id": 4,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 6. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 7,
+         "title": "Buổi 7: Bảo mật ứng dụng",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Giới thiệu về bảo mật ứng dụng",
+               "content": "Bảo mật ứng dụng giúp bảo vệ dữ liệu người dùng và ngăn chặn các cuộc tấn công."
+            },
+            {
+               "id": 2,
+               "title": "Xác thực người dùng",
+               "content": "Sử dụng JWT hoặc OAuth để xác thực người dùng an toàn."
+            },
+            {
+               "id": 3,
+               "title": "Bảo vệ API",
+               "content": "Sử dụng token để bảo vệ các endpoint API khỏi truy cập trái phép."
+            },
+            {
+               "id": 4,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 7. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 8,
+         "title": "Buổi 8: Tối ưu SEO",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Giới thiệu về SEO",
+               "content": "SEO giúp cải thiện thứ hạng tìm kiếm của ứng dụng trên Google."
+            },
+            {
+               "id": 2,
+               "title": "Sử dụng React Helmet",
+               "content": "React Helmet cho phép quản lý thẻ meta trong ứng dụng React."
+            },
+            {
+               "id": 3,
+               "title": "Tối ưu hóa tốc độ tải trang",
+               "content": "Sử dụng lazy loading, nén hình ảnh và giảm kích thước bundle để cải thiện tốc độ tải trang."
+            },
+            {
+               "id": 4,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 8. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 9,
+         "title": "Buổi 9: Kiểm thử ứng dụng",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Giới thiệu về kiểm thử",
+               "content": "Kiểm thử giúp đảm bảo ứng dụng hoạt động đúng và không có lỗi."
+            },
+            {
+               "id": 2,
+               "title": "Kiểm thử đơn vị với Jest",
+               "content": "Jest là framework kiểm thử phổ biến cho React, hỗ trợ kiểm thử đơn vị và snapshot."
+            },
+            {
+               "id": 3,
+               "title": "Kiểm thử tích hợp với React Testing Library",
+               "content": "React Testing Library giúp kiểm thử các component React một cách tự nhiên."
+            },
+            {
+               "id": 4,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 9. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 10,
+         "title": "Buổi 10: Tổng kết khóa học",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Tổng kết kiến thức",
+               "content": "Bạn đã học được rất nhiều kiến thức từ cơ bản đến nâng cao trong React."
+            },
+            {
+               "id": 2,
+               "title": "Hướng đi tiếp theo",
+               "content": "Tiếp tục thực hành, xây dựng dự án thực tế và tìm hiểu thêm về các công nghệ mới."
+            },
+            {
+               "id": 3,
+               "title": "Cảm ơn bạn đã tham gia khóa học!",
+               "content": "<strong>Chúc bạn thành công trong hành trình lập trình của mình!</strong>"
+            }
+         ]
+      },
+      {
+         "lessonId": 11,
+         "title": "Buổi 11: Xây dựng ứng dụng thực tế",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Giới thiệu dự án thực tế",
+               "content": "Xây dựng một ứng dụng quản lý công việc đơn giản với React."
+            },
+            {
+               "id": 2,
+               "title": "Thiết kế giao diện",
+               "content": "Sử dụng Tailwind CSS để tạo giao diện người dùng đẹp mắt và responsive."
+            },
+            {
+               "id": 3,
+               "title": "Quản lý trạng thái với Context API",
+               "content": "Sử dụng Context API để quản lý trạng thái của ứng dụng, bao gồm danh sách công việc và trạng thái hoàn thành."
+            },
+            {
+               "id": 4,
+               "title": "Tương tác với API giả lập",
+               "content": "Sử dụng JSON Server để tạo API giả lập cho ứng dụng, cho phép thêm, sửa, xóa công việc."
+            },
+            {
+               "id": 5,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 11. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 12,
+         "title": "Buổi 12: Triển khai ứng dụng thực tế",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Chuẩn bị triển khai",
+               "content": "Đảm bảo ứng dụng đã sẵn sàng để triển khai, không có lỗi và đã được tối ưu."
+            },
+            {
+               "id": 2,
+               "title": "Chọn nền tảng triển khai",
+               "content": "Có nhiều lựa chọn như Vercel, Netlify, Heroku, AWS, Firebase."
+            },
+            {
+               "id": 3,
+               "title": "Triển khai lên Vercel",
+               "content": "1. Đăng nhập vào Vercel\n2. Kết nối với GitHub\n3. Chọn repository và triển khai"
+            },
+            {
+               "id": 4,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 12. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      },
+      {
+         "lessonId": 13,
+         "title": "Buổi 13: Bảo mật ứng dụng thực tế",
+         "slides": [
+            {
+               "id": 1,
+               "title": "Giới thiệu về bảo mật ứng dụng",
+               "content": "Bảo mật ứng dụng giúp bảo vệ dữ liệu người dùng và ngăn chặn các cuộc tấn công."
+            },
+            {
+               "id": 2,
+               "title": "Xác thực người dùng",
+               "content": "Sử dụng JWT hoặc OAuth để xác thực người dùng an toàn."
+            },
+            {
+               "id": 3,
+               "title": "Bảo vệ API",
+               "content": "Sử dụng token để bảo vệ các endpoint API khỏi truy cập trái phép."
+            },
+            {
+               "id": 4,
+               "title": "Kết thúc buổi học",
+               "content": "Bạn đã hoàn tất Buổi 13. Sẵn sàng làm Quiz để qua buổi tiếp theo nhé 🎉"
+            }
+         ]
+      }
+   ]
+}

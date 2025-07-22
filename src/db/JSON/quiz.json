@@ -1,0 +1,65 @@
+{
+   "quiz": [{
+         "question": "Vite là gì?",
+         "options": [
+            "Một framework CSS",
+            "Một công cụ build nhanh cho dự án web",
+            "Một thư viện JavaScript",
+            "Một trình duyệt web"
+         ],
+         "answer": [1],
+         "explanation": "Vite là một công cụ build nhanh, thay thế Webpack, giúp khởi tạo và chạy dự án web hiệu quả hơn.",
+         "type": "singleSelect"
+      },
+      {
+         "question": "Lệnh nào dùng để tạo project React với Vite?",
+         "options": [
+            "npm install vite",
+            "npm create vite@latest",
+            "npx vite init",
+            "npm run vite"
+         ],
+         "answer": [1],
+         "explanation": "Lệnh chính xác để tạo project React với Vite là `npm create vite@latest`.",
+         "type": "singleSelect"
+      },
+      {
+         "question": "Tailwind CSS là gì?",
+         "options": [
+            "Một framework CSS tiện lợi, nhanh chóng",
+            "Một công cụ build JavaScript",
+            "Một thư viện React",
+            "Một trình duyệt web"
+         ],
+         "answer": [0],
+         "explanation": "Tailwind CSS là một framework CSS utility-first, giúp bạn tạo giao diện nhanh chóng và dễ dàng.",
+         "type": "singleSelect"
+      },
+      {
+         "question": "File nào cần cấu hình để Tailwind CSS hoạt động?",
+         "options": [
+            "vite.config.js",
+            "tailwind.config.js",
+            "webpack.config.js",
+            "react.config.js"
+         ],
+         "answer": [1],
+         "explanation": "Tailwind CSS cần cấu hình trong file `tailwind.config.js` để hoạt động.",
+         "type": "singleSelect"
+      },
+      {
+         "question": "Lệnh nào dùng để chạy project React với Vite?",
+         "options": [
+            "npm start",
+            "npm run dev",
+            "npm run build",
+            "npm serve"
+         ],
+         "answer": [1],
+         "explanation": "Lệnh `npm run dev` được sử dụng để chạy project React với Vite trong môi trường phát triển.",
+         "type": "singleSelect"
+      }
+   ],
+   "title": "Quiz Card",
+   "type": "quiz"
+}

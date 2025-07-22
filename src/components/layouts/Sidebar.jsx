@@ -1,18 +1,18 @@
 import lessons from "../../db/JSON/lessons.json"; // nếu lessons không truyền từ props
 import React from "react";
 
-export default function Sidebar({ isOpen, toggleSidebar }) {
+export default function Sidebar({ openSidebar, setOpenSidebar }) {
   return (
     <aside
       className={`bg-gray-100 border-r transition-all duration-300 ${
-        isOpen ? "w-64 p-4" : "w-0 p-0 overflow-hidden"
+        openSidebar, setOpenSidebar }) { ? "w-64 p-4" : "w-4 p-0 overflow-hidden"
       }`}
     >
-      <button onClick={toggleSidebar} className="text-xl mb-4">
-        {isOpen ? "<" : "="}
-      </button>
+      {/* <button onClick={toggleSidebar} className="text-xl mb-4">
+        {openSidebar, toggleSidebar }) { ? "<" : "="}
+      </button> */}
 
-      {isOpen && (
+      {openSidebar, setOpenSidebar }) { && (
         <ul className="space-y-2">
           {lessons.map((lesson) => (
             <li
