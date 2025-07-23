@@ -16,13 +16,12 @@ import React from "react";
 
 // ==============================================
 export default function LessonLayout() {
-
   const lessonId = 1;
   // const [lessonDone, setLessonDone] = useState(false);
   const [canProceed, setCanProceed] = useState(false);
   const [showCongrat, setShowCongrat] = useState(false);
   const [activeTab, setActiveTab] = useState("video");
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [leftOpen, setLeftOpen] = useState(false);
   const [rightOpen, setRightOpen] = useState(false);
   const [lessons, setLessons] = useState(lessonsRaw);
 
@@ -32,7 +31,7 @@ export default function LessonLayout() {
 
   const slidesData = slides.map((slide, index) => ({
     id: index + 1,
-    ...slide
+    ...slide,
   }));
 
   // Load progress from localStorage
@@ -68,17 +67,31 @@ export default function LessonLayout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header userName="Justin" />
+      <Header
+        userName="Justin"
+        isSidebarOpen={leftOpen}
+        setSidebarOpen={setLeftOpen}
+      />
       <div className="px-6 pt-2">
-        <ProgressTracker lessons={lessons} openChat={rightOpen} setOpenChat={setRightOpen} />
+        <ProgressTracker
+          lessons={lessons}
+          openChat={rightOpen}
+          setOpenChat={setRightOpen}
+        />
       </div>
 
-
       <div className="flex flex-1">
-        <Sidebar openSidebar={sidebarOpen} setOpenSidebar={() => setSidebarOpen(!sidebarOpen)} />
+        <Sidebar
+          openSidebar={leftOpen}
+          setOpenSidebar={() => setLeftOpen(!leftOpen)}
+        />
         <main className="flex-1 p-6">
-          <TabSwitch activeTab={activeTab} setActiveTab={setActiveTab} lessonDone={lessonDone} />
-          
+          <TabSwitch
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            lessonDone={lessonDone}
+          />
+
           <div
             className={`border-2 rounded-lg p-4 shadow bg-white mt-4 ${
               activeTab === "video"
@@ -89,8 +102,12 @@ export default function LessonLayout() {
             }`}
           >
             {activeTab === "video" && <VideoTab onComplete={unlockQuiz} />}
-            {activeTab === "slide" && <SlideTab slides={slidesData} onComplete={unlockQuiz} />}
-            {activeTab === "quiz" && lessonDone && <Quiz onPassed={handleQuizPassed} />}
+            {activeTab === "slide" && (
+              <SlideTab slides={slidesData} onComplete={unlockQuiz} />
+            )}
+            {activeTab === "quiz" && lessonDone && (
+              <Quiz onPassed={handleQuizPassed} />
+            )}
           </div>
 
           {canProceed && (
@@ -101,11 +118,13 @@ export default function LessonLayout() {
 
           {showCongrat && <CongratPopup />}
         </main>
-        <RightSide isOpen={rightOpen} toggle={() => setRightOpen(!rightOpen)} />
+        <RightSide
+          openChat={rightOpen}
+          setOpenChat={setRightOpen}
+        />
       </div>
     </div>
   );
 }
-
 
 // =============================================

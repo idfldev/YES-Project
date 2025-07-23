@@ -1,8 +1,5 @@
 
-
-
 export default function Header({ userName, isSidebarOpen, setSidebarOpen }) {
-
     return (
         <header className="flex items-center justify-between bg-white px-1 py-1 shadow">
             

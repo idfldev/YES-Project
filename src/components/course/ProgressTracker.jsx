@@ -12,7 +12,7 @@ export default function ProgressTracker({ lessons, openChat, setOpenChat }) {
     <div className="bg-white border border-gray-300 rounded p-4 mb-4 shadow">
       <div className='flex items-center justify-between mb-2'>
         <h2 className="text-lg font-bold mb-2">📈 Tiến trình khóa học</h2>
-        <button onClick={() => setOpenChat(!openChat)} className="mb-2 text-xl">{openChat ? "❌" : "💬"}</button>
+        <button onClick={() => setOpenChat(!openChat)} className="cursor mb-2 text-xl">{openChat ? "❌" : "💬"}</button>
       </div>
       <p className="text-sm text-gray-600 mb-2">
         Hoàn thành <strong>{completedCount}</strong> / <strong>{totalLessons}</strong> buổi học

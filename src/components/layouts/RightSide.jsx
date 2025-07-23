@@ -1,7 +1,7 @@
 export default function RightSide({ openChat, setOpenChat }) {
   return (
     <aside className={`bg-gray-100 border-l p-4 transition-all duration-300 ${
-      openChat ? "w-72" : "w-0 overflow-hidden"
+      openChat ? "w-72" : "w-0 overflow-hidden border-none"
     }`}>
       {/* <button onClick={toggle} className="mb-2 text-xl">{openChat ? "❌" : "💬"}</button> */}
       {openChat && (
